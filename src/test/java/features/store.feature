@@ -5,13 +5,11 @@ Feature: Grocery API
       # Set a configuration for the payload
     * url baseUrl
 
-  @TestCaseKey=SCRUM-T1 @SCRUM-T1
-  Scenario: Get All Products from Grocery
+  @TestCaseKey=SCRUM-T7 @SCRUM-T2
+  Scenario: Get All Products from store
     Given header Content-Type = 'application/json'
-    And path '/v2/pet/findByStatus'
-    And param status = 'pending'
+    And path '/v2/store/inventory'
     When method get
     Then status 200
     * print response
-
 
